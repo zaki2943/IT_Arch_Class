@@ -15,7 +15,7 @@ class StringCalc {
         "/" to 3
     )
     fun String.isNumber(): Boolean {
-        val pattern = java.util.regex.Pattern.compile("^[0-9]*$")
+        val pattern = java.util.regex.Pattern.compile("^[0-9.]*$")
         val matcher = pattern.matcher(this)
         return matcher.matches()
     }
