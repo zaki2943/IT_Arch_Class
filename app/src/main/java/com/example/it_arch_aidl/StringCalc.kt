@@ -110,7 +110,7 @@ class StringCalc {
             "+" -> return b1.add(b2).toDouble()
             "-" -> return b1.subtract(b2).toDouble()
             "*" -> return b1.multiply(b2).toDouble()
-            "/" -> return b1.divide(b2).toDouble()
+            "/" -> return b1.divide(b2,5, BigDecimal.ROUND_HALF_UP).toDouble()
         }
         throw RuntimeException("Unexpected operator: $op")
     }
